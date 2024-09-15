@@ -68,16 +68,30 @@
 
 .btn-fill {
   background: var(--cl-white);
+  border: 2px solid var(--cl-white);
   color: var(--cl-primary-shade-30);
+  transition: all 0.2s linear;
+}
+
+.btn-fill:hover {
+  background: transparent;
+  border: 2px solid var(--cl-white);
+  color: var(--cl-white);
 }
 
 .btn-outline {
   color: var(--cl-white);
   border: 2px solid var(--cl-white);
+  transition: all 0.2s linear;
+}
+
+.btn-outline:hover {
+  background: var(--cl-white);
+  color: var(--cl-primary-shade-30);
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 /* ~ HTML ~ */
@@ -248,6 +262,12 @@ header {
   border-radius: 50%;
   background-color: var(--cl-secondary);
 }
+
+.icons-wrapper img {
+  width: 100%;
+  height: 100%;
+  min-width: 35px;
+}
 /* .card-header i {
   font-size: 32px;
   color: var(--cl-white);
@@ -333,6 +353,25 @@ header {
   width: 100%;
   align-items: center;
   justify-content: space-between;
+  transition: all 0.5s linear;
+}
+
+.services-details:hover {
+  cursor: pointer;
+}
+
+.services-details h3 {
+  transition: color 0.3s linear;
+
+  /* margin-bottom: var(--spacing-xs); */
+
+  /* padding: 0.25em 0.5em; */
+  /* background: var(--cl-primary); */
+  /* width: 100%; */
+}
+
+.services-details:hover h3 {
+  color: var(--cl-primary);
 }
 
 .services-details svg {
@@ -342,12 +381,12 @@ header {
   /* transform: rotate(-90deg); */
 }
 
-.services-details h3 {
-  /* margin-bottom: var(--spacing-xs); */
+.services-details svg g {
+  transition: fill 0.3s linear;
+}
 
-  /* padding: 0.25em 0.5em; */
-  /* background: var(--cl-primary); */
-  /* width: 100%; */
+.services-details:hover svg g {
+  fill: var(--cl-primary);
 }
 
 .expanded-details {
@@ -470,6 +509,10 @@ textarea {
   /* flex-direction: column; */
 }
 
+.socials a:hover {
+  border-bottom: 1px solid var(--cl-white);
+}
+
 .facebook {
   border-right: 1px solid var(--cl-white);
   padding-right: 1rem;
@@ -487,14 +530,106 @@ textarea {
   width: 32px;
 }
 
+.whatsapp-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+/* .whatsapp-wrapper.hidden {
+  display: none;
+} */
+
+.wa-img {
+  max-width: 360px;
+}
+
+.wa-details {
+  /* color: var(--cl-white); */
+}
+
+.wa-details p:first-of-type {
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-block: 0.25rem;
+}
+
+.wa-details h3:nth-of-type(2) {
+  margin-top: 1rem;
+}
+
+.wa-details p:nth-of-type(3) {
+  margin-top: 0.35rem;
+  margin-bottom: 0.25rem;
+  font-size: 1.15rem;
+}
+
+.wa-details p:nth-of-type(4) {
+  font-size: 1.15rem;
+  margin-bottom: 1.25rem;
+}
+
+.wa-details a {
+  display: block;
+  max-width: 100%;
+  /* border: 1px solid var(--cl-white); */
+}
+
 /* ~ MEDIA QUERY ~ */
 @media (max-width: 1024px) {
+  .navlink {
+    font-size: 1.25rem;
+  }
+
+  .benefits {
+    gap: 3rem;
+  }
+
+  .benefits h2 {
+    font-size: 2.85rem;
+  }
+
+  .card-header h3 {
+    font-size: 1.5rem;
+  }
+
+  .service-list > h2 {
+    font-size: 2.85rem;
+  }
+
+  .contact-wrapper h2 {
+    font-size: 2.85rem;
+  }
 }
 
 @media (max-width: 768px) {
+  .logo-image {
+    width: 180px;
+  }
+
+  .navlist {
+    gap: 1.15rem;
+  }
+
+  .navlink {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 550px) {
+  .navbar {
+    display: none;
+  }
+
+  .mobile-nav-wrapper {
+    display: block;
+  }
+
+  /* .close-button {
+    display: none;
+  } */
 }
 
 @media (max-width: 375px) {

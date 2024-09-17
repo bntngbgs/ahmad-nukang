@@ -877,7 +877,7 @@ textarea {
 
   #hero {
     height: 580px;
-    background: '../public/images/hero-bg-mobile.webp';
+    background-image: url('../public/images/hero-bg-mobile.webp');
     background-size: 1400px;
     background-position: bottom;
   }

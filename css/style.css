@@ -161,7 +161,7 @@ header {
 
 /* ~ HERO ~ */
 #hero {
-  background: url(../public/images/hero-bg-desktop.jpg);
+  background: '../public/images/hero-bg-desktop.jpg';
   background-color: var(--cl-primary-shade);
   /* height: 76vh; */
   height: 700px;
@@ -877,7 +877,7 @@ textarea {
 
   #hero {
     height: 580px;
-    background: url(../public/images/hero-bg-mobile.webp);
+    background: '../public/images/hero-bg-mobile.webp';
     background-size: 1400px;
     background-position: bottom;
   }

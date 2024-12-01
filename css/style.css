@@ -125,15 +125,9 @@ header {
   margin-right: auto;
 }
 
-.navbar {
-}
-
 .navlist {
   display: flex;
   gap: var(--spacing-l);
-}
-
-.navitem {
 }
 
 .navlink {

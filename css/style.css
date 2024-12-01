@@ -154,7 +154,7 @@ header {
 
 /* ~ HERO ~ */
 #hero {
-  background-image: url('/images/hero-bg-desktop.jpg');
+  background-image: url('./images/hero-bg-desktop.jpg');
   background-color: var(--cl-primary-shade);
   height: 700px;
   background-repeat: no-repeat;

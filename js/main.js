@@ -30,7 +30,6 @@ mobileNav.addEventListener('click', () => {
 closeNav.addEventListener('click', () => {
   closeNav.classList.add('hidden');
   mobileNav.classList.remove('hidden');
-  // navBar.classList.remove('appear');
   navBar.classList.add('transparent');
   navBar.classList.add('slide-right');
 
@@ -42,7 +41,7 @@ closeNav.addEventListener('click', () => {
   }, 200);
 });
 
-for (nav of navItem) {
+for (let nav of navItem) {
   nav.addEventListener('click', () => {
     closeNav.classList.add('hidden');
 
@@ -59,7 +58,7 @@ for (nav of navItem) {
   });
 }
 
-for (service of servicesDetailsBtn) {
+for (let service of servicesDetailsBtn) {
   service.addEventListener('click', (e) => {
     let chevron = e.currentTarget.children[1];
     let targetEl = e.currentTarget.parentElement.nextElementSibling;
@@ -75,7 +74,6 @@ contactChoice.addEventListener('click', (e) => {
   } else {
     document.querySelector('.active').classList.remove('active');
     e.target.classList.add('active');
-    // console.log(document.querySelector('.active'));
   }
 
   if (e.target.classList.contains('whatsapp', 'active')) {
@@ -85,6 +83,11 @@ contactChoice.addEventListener('click', (e) => {
     document.querySelector('.whatsapp-wrapper').classList.add('hidden');
     document.querySelector('.form-wrapper').classList.remove('hidden');
   }
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+  morphingText();
+  setInterval(morphingText, 6000);
 });
 
 // Functions
@@ -101,6 +104,3 @@ function morphingText() {
     morphText.textContent = 'Repair';
   }, 4000);
 }
-
-morphingText();
-setInterval(morphingText, 6000);
